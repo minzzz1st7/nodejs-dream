@@ -32,6 +32,8 @@ app.get('/file2', (req, res) => {
     .catch(error => next(error));
 });
 
+
+// 동기적이나 아래의 안전망에는 포착되지 않는다
 app.get('/file3', async (req, res) => {
     const data = await fsAsync.readFile('/file.txt')
 });
