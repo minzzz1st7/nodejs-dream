@@ -2,9 +2,6 @@ const path = require('path');
 const os = require('os');
 const fs = require('fs');
 
-//계획
-// 1. 사용자가 원하는 폴더의 이름을 받아온다
-
 const folder = process.argv[2];
 const workingDir = path.join(os.homedir(), 'Pictures2', folder);
 console.log("wirjubg!!!!!",workingDir)
