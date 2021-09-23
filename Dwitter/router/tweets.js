@@ -18,7 +18,8 @@ const router = express.Router();
 // GET /tweets
 // GET /tweets?username=:username
 router.get('/', (req, res, next) => {
-    const usernmae = req.query.username;
+
+    const username = req.query.username;
     const data = username 
     ? tweets.filter((t) => t.username === username)
     : tweets;
@@ -29,7 +30,6 @@ router.get('/', (req, res, next) => {
 // POST /tweets
 // PUT /tweets/:id
 // DELETE /tweets/:id
-
 
 export default router;
 
